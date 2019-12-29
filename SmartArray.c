@@ -1,6 +1,5 @@
 //Henry Jetmundsen
 //COP 3502C Section 0001
-//PID: 3780876
 
 #include <stdio.h>
 #include <string.h>
@@ -178,8 +177,6 @@ char *get(SmartArray *smarty, int index){
 }
 
 char *set(SmartArray *smarty, int index, char *str){
-	int i;
-
 	if(smarty == NULL || index < 0 ||index >= smarty->size || smarty->array[index] == NULL || str == NULL){
 		return NULL;
 	} else {
@@ -201,10 +198,6 @@ char *insertElement(SmartArray *smarty, int index, char *str){
 	}
 
 	if(index > smarty->size){
-		// smarty->array[smarty->size] = malloc(sizeof(char) * strlen(str) + 1);
-		// strcpy(smarty->array[smarty->size], str);
-		// smarty->size++;
-		// return smarty->array[smarty->size];
 		return put(smarty, str);
 	}
 
